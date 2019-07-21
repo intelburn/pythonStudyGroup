@@ -7,15 +7,16 @@ def findDups(raw=[]):
             processed[item] = 1
     return processed
 
+def printDups(dups={}):
+    for dup in dups.keys():
+        print("The name {0} occurreed {1} times".format(dup, dups[dup]))
+
 names = ['bob', 'susan', 'bob', 'dan', 'susan']
 nameDups = findDups(names)
-for name in nameDups.keys():
-    print("The name {0} occurreed {1} times".format(name, nameDups[name]))
+printDups(nameDups)
 
-print()
-print()
+print("\n")
 
 students = ['rahul', 'susan', 'quesadilla', 'robert', 'cassandra', 'austin', 'sandra', 'quesadilla', 'rahul', 'austin']
 studentDups = findDups(students)
-for student in studentDups.keys():
-    print("The name {0} occurreed {1} times".format(student, studentDups[student]))
+printDups(studentDups)
